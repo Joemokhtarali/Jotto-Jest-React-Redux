@@ -1,1 +1,0 @@
-# Jotto-Jest-React-Redux

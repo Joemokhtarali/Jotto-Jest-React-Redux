@@ -10,5 +10,5 @@ export const checkProps = (component, confirmingProps) => {
     "prop",
     component.name
   );
-  expect(propError).toBeUndefined()
-};
+  expect(propError).toBeUndefined() 
+};  
