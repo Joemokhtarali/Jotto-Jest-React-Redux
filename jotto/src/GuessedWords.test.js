@@ -38,4 +38,4 @@ describe('if there are  words guessed', () => {
 })
 
 
-//before each tests
+//
