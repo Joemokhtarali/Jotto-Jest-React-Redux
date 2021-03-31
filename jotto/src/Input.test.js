@@ -4,10 +4,9 @@ import { shallow } from 'enzyme'
 import { findByTestAttr, checkProps } from '../test/testUtils.js'
 import Input from './Input'
 
-const setupProps = {}
 
-const setup = () => {
-    return shallow(<Input />)
+const setup = (secretWord='party') => {
+    return shallow(<Input secretWord={secretWord}/>)
 }
 
 test('renders without error', () => {
@@ -15,3 +14,7 @@ test('renders without error', () => {
     const inputComponent = findByTestAttr(wrapper, 'component-input')
     expect(inputComponent.length).toBe(1)
 })
+
+test('does not throw warning with expected props', () => {
+    checkProps(Input, {secretWord: 'party'})
+}) 
