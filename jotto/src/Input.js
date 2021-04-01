@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import propTypes from "prop-types";
 
 const Input = ({ secretWord }) => {
-    const [currentGuess, setCurrentGuess] = useState('')
+    const [currentGuess, setCurrentGuess] = React.useState('')
   return (
     <div data-test="component-input">
-      <form className="form-inline">
+      <form className="form-inline" >
         <input
           type="text"
           data-test="input-box"
@@ -18,6 +18,9 @@ const Input = ({ secretWord }) => {
           type="submit"
           data-test="submit-button"
           className="btn btn-promary mb-2"
+          onClick={()=> {
+              setCurrentGuess("")
+          }}
         >
           Submit
         </button>
